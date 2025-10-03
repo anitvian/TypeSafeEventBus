@@ -2,21 +2,17 @@ package com.eventBus;
 
 public class UserService {
 
-    private WelcomeEmailListener emailListener;
-    private AnalyticsListener analyticsListener;
+    private EventBus eventBus;
 
-    public UserService(WelcomeEmailListener emailListener, AnalyticsListener analyticsListener) {
-        this.emailListener = emailListener;
-        this.analyticsListener = analyticsListener;
+    public UserService(EventBus eventBus){
+        this.eventBus = eventBus;
     }
 
     public void registerUser(String username){
 
         System.out.println("User Registered - "+username);
         UserRegisteredEvent event = new UserRegisteredEvent(username);
-
-        emailListener.handleEvent(event);
-        analyticsListener.handleEvent(event);
+        eventBus.publish(event);
 
     }
 }

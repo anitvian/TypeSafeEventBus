@@ -3,12 +3,16 @@ package com.eventBus;
 public class Main {
 
 
-    public static void main(String[] argx){
+     static void main(String[] args){
 
          WelcomeEmailListener emailListener = new WelcomeEmailListener();
          AnalyticsListener analyticsListener = new AnalyticsListener();
+         EventBus eventBus = new EventBus();
 
-        UserService userService = new UserService(emailListener,analyticsListener);
+         eventBus.register(emailListener);
+         eventBus.register(analyticsListener);
+
+        UserService userService = new UserService(eventBus);
 
         userService.registerUser("Anit");
     }
