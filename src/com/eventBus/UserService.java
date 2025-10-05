@@ -15,4 +15,10 @@ public class UserService {
         eventBus.publish(event);
 
     }
+
+    public void userOrder(String orderId){
+        System.out.println("Order Placed - "+orderId);
+        OrderPlacedEvent event = new OrderPlacedEvent(orderId);
+        eventBus.publish(event);
+    }
 }
