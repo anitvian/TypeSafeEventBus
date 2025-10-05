@@ -1,13 +1,4 @@
-# Type-Safe Event Bus (In Progress)
 
-A learning project where I build a simple event-driven system in Java from scratch.
-
-## Current Progress
-✅ Manual event publishing and listeners  
-🚧 Next: Introduce EventBus for automatic listener management
-
-## Goal
-Build a type-safe, generic event bus similar to Spring’s ApplicationEventPublisher or Guava EventBus.
 # Type-Safe Event Bus (In Progress)
 
 A learning project where I build a simple **event-driven system** in Java from scratch.
@@ -15,15 +6,16 @@ A learning project where I build a simple **event-driven system** in Java from s
 ---
 
 ## Current Progress
-✅ Manual event publishing and listeners implemented  
-✅ EventBus added for automatic listener management  
-✅ Listeners (WelcomeEmailListener, AnalyticsListener) registered with EventBus  
-✅ UserService decoupled from listeners
+- ✔ Manual event publishing and listeners implemented
+- ✔ EventBus introduced for automatic listener management
+- ✔ Listeners (`WelcomeEmailListener`, `AnalyticsListener`) registered dynamically
+- ✔ `UserService` fully decoupled from listeners
+- ✔ EventBus made **generic and type-safe** using `<T>`
+- ✔ Application tested successfully with `UserRegisteredEvent`
 
 ---
 
 ## Next Steps
-🚧 Refactor EventBus to be **generic and type-safe**  
 🚧 Support multiple event types beyond `UserRegisteredEvent`  
 🚧 Add more listeners to demonstrate scalability
 

@@ -1,6 +1,6 @@
 package com.eventBus;
 
-public class WelcomeEmailListener implements EventListener{
+public class WelcomeEmailListener implements EventListener<UserRegisteredEvent>{
 
     public void handleEvent(UserRegisteredEvent event){
 

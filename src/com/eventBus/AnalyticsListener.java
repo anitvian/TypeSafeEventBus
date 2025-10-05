@@ -1,6 +1,6 @@
 package com.eventBus;
 
-public class AnalyticsListener implements EventListener{
+public class AnalyticsListener implements EventListener<UserRegisteredEvent>{
 
     @Override
     public void handleEvent(UserRegisteredEvent event) {

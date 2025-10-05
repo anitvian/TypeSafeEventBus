@@ -1,6 +1,6 @@
 package com.eventBus;
 
-public interface EventListener {
+public interface EventListener<T> {
 
-    public void handleEvent(UserRegisteredEvent event);
+     void handleEvent(T event);
 }
